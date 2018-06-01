@@ -4,7 +4,8 @@
   "description": "a place where you can store you great ideas",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app",
+    "server": "nodemon app"
   },
   "author": "Niccu Bagonoc",
   "license": "ISC",

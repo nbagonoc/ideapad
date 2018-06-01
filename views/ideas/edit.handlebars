@@ -1,11 +1,10 @@
 <div class="container mt-3">
     {{#each errors}}
-        <div class="alert alert-danger">{{text}}</div>
-    {{else}}
-    {{/each}}
+    <div class="alert alert-danger">{{text}}</div>
+    {{else}} {{/each}}
     <div class="card">
         <div class="card-header">
-            Edit idea
+            <span class="text-capitalize lead">Edit idea</span>
         </div>
         <div class="card-body">
             <form action="/ideas/{{data.id}}?_method=PUT" method="post">
@@ -22,7 +21,8 @@
                         <textarea class="form-control" name="details" required>{{data.details}}</textarea>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                <a href="/ideas" class="btn btn-danger btn-sm">Cancel</a>
             </form>
         </div>
     </div>

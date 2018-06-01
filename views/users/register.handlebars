@@ -1,36 +1,32 @@
 <div class="container mt-3">
-    <div class="card">
-        <div class="card-header">
-            <h3 class="text-center">Register an account</h3>
-        </div>
-        <div class="card-body">
-            <form action="/users/register" method="post">
-                <div class="form-group row">
-                    <label for="name" class="col-form-label col-sm-3">Name</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" name="name" value="{{name}}" required>
-                    </div>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">Register an account</h3>
                 </div>
-                <div class="form-group row">
-                    <label for="email" class="col-form-label col-sm-3">Email</label>
-                    <div class="col-sm-9">
-                        <input type="email" class="form-control" name="email" value="{{email}}" required>
-                    </div>
+                <div class="card-body">
+                    <form action="/users/register" method="post">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" name="name" value="{{name}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="email" value="{{email}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" name="password" value="{{password}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" class="form-control" name="confirmPassword" value="{{confirmPassword}}">
+                        </div>
+                        <button type="submit" class="btn btn-success">Register</button>
+                    </form>
                 </div>
-                <div class="form-group row">
-                    <label for="password" class="col-form-label col-sm-3">Password</label>
-                    <div class="col-sm-9">
-                        <input type="password" class="form-control" name="password" value="{{password}}" required>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="confirmPassword" class="col-form-label col-sm-3">Confirm Password</label>
-                    <div class="col-sm-9">
-                        <input type="password" class="form-control" name="confirmPassword" value="{{confirmPassword}}" required>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Register</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>

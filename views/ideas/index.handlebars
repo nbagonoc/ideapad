@@ -1,20 +1,20 @@
 <div class="container mt-3">
     <h1>Your Ideas</h1>
     {{#each data}}
-    <div class="card mb-2">
+    <div class="card mb-3">
         <div class="card-header">
-            <h4 class="text-capitalize">{{idea}}</h4>
+            <span class="text-capitalize lead">{{idea}}</span>
         </div>
         <div class="card-body">
             <p>{{details}}</p>
-            <a class="btn btn-sm btn-block mb-1 btn-secondary" href="/ideas/edit/{{id}}">edit</a>
-            <form action="/ideas/{{id}}?_method=DELETE" method="post">
+            <a class="btn btn-sm mr-1 btn-success float-left" href="/ideas/edit/{{id}}">Edit</a>
+            <form action="/ideas/{{id}}?_method=DELETE" method="post" class="float-left">
                 <input type="hidden" name="_method" value="DELETE">
-                <input type="submit" class="btn btn-sm btn-block btn-danger" value="delete">
+                <input type="submit" class="btn btn-sm btn-danger" value="Delete">
             </form>
         </div>
     </div>
     {{else}}
-        <p>No ideas saved.</p>
+    <p>No ideas saved.</p>
     {{/each}}
 </div>
