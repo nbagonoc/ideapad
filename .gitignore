@@ -1,1 +1,2 @@
-node_modules
+/node_modules
+/config/db_secret_key_dev2.js
