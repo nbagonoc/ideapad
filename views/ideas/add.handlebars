@@ -1,9 +1,8 @@
 <div class="container mt-3">
     <div class="card">
-        <div class="card-header">
-            Add an idea
-        </div>
         <div class="card-body">
+            <h3 class="font-weight-light">Add an idea</h3>
+            <hr>
             <form action="/ideas" method="post">
                 <div class="form-group row">
                     <label for="idea" class="col-form-label col-sm-2">Your Idea</label>
@@ -14,7 +13,7 @@
                 <div class="form-group row">
                     <label for="details" class="col-form-label col-sm-2">Details</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" name="details"></textarea>
+                        <textarea class="form-control" name="details" value="{{data.details}}"></textarea>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success btn-sm">Submit</button>

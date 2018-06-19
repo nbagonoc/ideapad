@@ -1,26 +1,19 @@
 <div class="container my-3">
-    <div class="card">
-        <div class="card-header">
-            Your ideas
-        </div>
-        <div class="card-body">
-            <ul class="list-group">
-                {{#each data}}
-                <li class="list-group-item">
-                    <h4 class="text-capitalize">{{idea}}</h4>
-                    <hr>
-                    <p class="font-weight-light">{{details}}</p>
-                    <hr>
-                    <a class="btn btn-sm mr-1 btn-success float-left" href="/ideas/edit/{{id}}">Edit</a>
-                    <form action="/ideas/{{id}}?_method=DELETE" method="post" class="float-left">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <input type="submit" class="btn btn-sm btn-danger" value="Delete">
-                    </form>
-                </li>
-                {{else}}
-                <p>No ideas saved.</p>
-                {{/each}}
-            </ul>
-        </div>
-    </div>
+    <ul class="list-group">
+        {{#each data}}
+        <li class="list-group-item">
+            <h4 class="text-capitalize">{{idea}}</h4>
+            <hr>
+            <p class="font-weight-light">{{details}}</p>
+            <hr>
+            <a class="btn btn-sm mr-1 btn-success float-left" href="/ideas/edit/{{id}}">Edit</a>
+            <form action="/ideas/{{id}}?_method=DELETE" method="post" class="float-left">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+            </form>
+        </li>
+        {{else}}
+        <p>No ideas saved.</p>
+        {{/each}}
+    </ul>
 </div>

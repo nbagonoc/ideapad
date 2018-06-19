@@ -3,10 +3,9 @@
     <div class="alert alert-danger">{{text}}</div>
     {{else}} {{/each}}
     <div class="card">
-        <div class="card-header">
-            <span class="text-capitalize lead">Edit idea</span>
-        </div>
         <div class="card-body">
+            <h3 class="font-weight-light">Edit an idea</h3>
+            <hr>
             <form action="/ideas/{{data.id}}?_method=PUT" method="post">
                 <input type="hidden" name="_method" value="PUT">
                 <div class="form-group row">
