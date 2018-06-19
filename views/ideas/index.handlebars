@@ -6,10 +6,12 @@
             <hr>
             <p class="font-weight-light">{{details}}</p>
             <hr>
-            <a class="btn btn-sm mr-1 btn-success float-left" href="/ideas/edit/{{id}}">Edit</a>
+            <a class="btn btn-sm mr-1 btn-success float-left" href="/ideas/edit/{{id}}">
+                <i class="fa fa-pencil-alt mr-1"></i>Edit</a>
             <form action="/ideas/{{id}}?_method=DELETE" method="post" class="float-left">
                 <input type="hidden" name="_method" value="DELETE">
-                <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+                <button type="submit" class="btn btn-sm btn-danger">
+                    <i class="fa fa-trash-alt mr-1"></i>Delete</button>
             </form>
         </li>
         {{else}}
