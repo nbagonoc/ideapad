@@ -1,9 +1,56 @@
 <div class="banner">
     <div class="banner-text">
         <div class="container">
-            <h1 class="display-4 text-capitalize mb-0 font-weight-bold">Got awesome ideas?</h1>
+            <h1 class="display-4 text-capitalize mb-0 font-weight-light">Got awesome ideas?</h1>
             <p class="lead">Here at IdeaPad, your awesome ideas will always be safe.</p>
-            <a href="/users/login" class="btn btn-success btn-lg text-uppercase">get started</a>
+            {{#if user}}
+            <a href="/ideas" class="btn btn-success btn-lg">Get started</a>
+            {{else}}
+            <a href="/users/register" class="btn btn-success btn-lg">Sign-up</a>
+            {{/if}}
         </div>
     </div>
+</div>
+<div class="container my-5 text-center">
+    <h3 class="font-weight-light display-4 text-secondary mb-0">Why IdeaPad is</h3>
+    <h1 class="text-uppercase font-weight-bold display-3 my-0">awesome</h1>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3>It's Simple</h3>
+                    <hr>
+                    <span>At cum nihil repellendus dignissimos tempora eveniet sequi fuga debitis, repudiandae.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3>It's Safe</h3>
+                    <hr>
+                    <span>At cum nihil repellendus dignissimos tempora eveniet sequi fuga debitis, repudiandae.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3>And Free</h3>
+                    <hr>
+                    <span>At cum nihil repellendus dignissimos tempora eveniet sequi fuga debitis, repudiandae.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container my-5 py-5 text-center border-top">
+    <h3 class="font-weight-light display-4 text-secondary">A better way of saving ideas</h3>
+    {{#if user}}
+    <a href="/ideas" class="btn btn-outline-success btn-lg font-weight-light">Get started</a>
+    {{else}}
+    <a href="/users/register" class="btn btn-outline-success btn-lg font-weight-light">Sign-up now</a>
+    {{/if}}
 </div>

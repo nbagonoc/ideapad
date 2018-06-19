@@ -89,11 +89,6 @@ app.get("/", (req, res) => {
   });
 });
 
-// about route
-app.get("/about", (req, res) => {
-  res.render("about");
-});
-
 // use ideas route
 app.use("/ideas", ideasRoute);
 // use ideas route
